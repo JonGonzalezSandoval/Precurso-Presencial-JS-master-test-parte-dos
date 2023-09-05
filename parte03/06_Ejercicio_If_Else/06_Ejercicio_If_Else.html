@@ -10,7 +10,31 @@
 
 <body>
     <script>
-        // Tu código aquí
+        //Declaracion de variables
+        let correcta;
+        let respuesta;
+        let intentos;
+
+        correcta = 5;
+        intentos = 1;        
+
+        respuesta = parseInt(prompt("Adivina el numero entre el 1 y el 10 tienes 3 intentos"));
+        intentos++;
+
+        while(respuesta != correcta && intentos<=3){ //Compruebo si la respuesta es correcta y si no se pasa del máximo de intentos
+            respuesta = parseInt(prompt("Has fallado, intento numero " + intentos + ". Adivina el numero entre el 1 y el 10")); //Guarda la nueva respuesta
+            console.log(typeof(intentos));
+            intentos++; //Incrementa el numero de intenteos en 1
+        }
+
+
+        if(respuesta == correcta){
+            alert("Enhorabuena el numero a acertar era el " + correcta);
+        }else{
+            alert("Te has quedado sin intentos, el numero correcto era " + correcta);
+        }
+
+
 
     </script>
 </body>
