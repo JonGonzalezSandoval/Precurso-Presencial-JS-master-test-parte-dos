@@ -18,6 +18,27 @@
         * 3. Una vez sepas que posición ocupa dicho carácter, puedes recuperar una subcadena que devuelva el primer número
         * y otra subcadena que contenga el segundo número
         */
+
+        let sumaSolicitada = prompt("Introduce una suma que quieras realizar");
+
+        //console.log(sumaSolicitada);
+
+        let posicionSimbolo = sumaSolicitada.indexOf("+");
+
+        while(posicionSimbolo == -1){
+            sumaSolicitada = prompt("Error: Introduce una SUMA que quieras realizar");
+            //console.log(sumaSolicitada);
+            posicionSimbolo = sumaSolicitada.indexOf("+");
+        }
+
+        let primerNumero = sumaSolicitada.substring(0, posicionSimbolo).trim();
+
+        let segundoNumero = sumaSolicitada.substring(posicionSimbolo + 1).trim();
+
+        console.log("Los numeros introducidos son: " + primerNumero + " y " + segundoNumero + ". El resultado de la suma es = " + (parseInt(primerNumero) + parseInt(segundoNumero)));
+
+
+
     </script>
 </body>
 

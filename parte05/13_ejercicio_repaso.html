@@ -13,7 +13,7 @@
         * Crear un array de 11 ints. Pedir al usuario que introduzca valores entre 0 y 10. Cada vez que introduzca un dígito, añadir uno al valor en esa posición del array.
         * Si por ejemplo introduce un 3, sumar uno a la posición 3. Mostrar en pantalla los valores. Si introduce un número mayor que 10, decir que ese número es incorrecto.
         * Si introduce un número negativo, mostrar en pantalla el número de cada posición y el valor que contiene. Por ejemplo, si introduce 7, 7, 7, 5, 6, 5, 9, 9, 10, -1 mostrar:
-        * 0
+        * 0 0
         * 1	0
         * 2	0
         * 3	0
@@ -24,6 +24,26 @@
         * 9	2
         * 10 1
         */
+
+        let listaNumeros = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        let numeroIntroducido = parseInt(prompt("Introduce a que posición quieres aumentar en 1 su valor"));
+
+        while(numeroIntroducido != -1){
+            if(numeroIntroducido >= 0 && numeroIntroducido <= 10){
+                listaNumeros[numeroIntroducido]++;
+            }else{
+                alert("Valor introducido no válido, introduce números entre 0 y 10 o -1 para mostrar los resultados y terminar");
+            }
+            numeroIntroducido = parseInt(prompt("Introduce a que posición (entre 0 y 10) quieres aumentar en 1 su valor o selecciona -1 para terminar"));
+        }
+
+        for (let i = 0; i < listaNumeros.length; i++) {
+            console.log(i + " " + listaNumeros[i]);
+        }
+
+
+
     </script>
 </body>
 

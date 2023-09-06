@@ -17,6 +17,20 @@
          * 3. Para poder modificar la mitad de la palabra (mayúsculas), necesitarás primero obtener una cadena que sólo tenga esa parte
          * 4. Una vez que tengamos la mitad de la palabra en mayúsculas, tendrás que reemplazar una subcadena por otra
          */
+
+        let palabraMinuscula = prompt("Introduce una palabra en minusulas").toLowerCase();
+
+        let longitudPalabra = palabraMinuscula.length;
+
+        let primeraMitad = palabraMinuscula.substring(0,longitudPalabra/2);
+
+        console.log(primeraMitad.length);
+
+        let palabraFinal = palabraMinuscula.replace(primeraMitad, primeraMitad.toUpperCase());
+
+        console.log(palabraFinal);
+
+
     </script>
 </body>
 

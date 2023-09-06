@@ -13,6 +13,22 @@
         /*
         * Poner los nombres de los meses en un array de 12. Cuando el usuario introduce un número del 1 al 12, mostrar el nombre de ese mes en pantalla.
         */
+
+        let listaMeses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+
+        let mesEscogido = parseInt(prompt("Que numero de més quieres ver?"));
+
+        while(mesEscogido < 1 || mesEscogido > 12){
+            mesEscogido = parseInt(prompt("Necesito que sea un mes válido (Entre 1 y 12)?"));
+        }
+
+        console.log(listaMeses.length);
+
+        console.log(listaMeses[ mesEscogido - 1]);
+
+
+
     </script>
 </body>
 
