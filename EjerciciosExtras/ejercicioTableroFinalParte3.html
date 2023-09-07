@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        Para este ejercicio se me han ocurrido dos formas de enseñarlo por la consola o bien mandado line a linea cada una de las letras o almacenando todo
+        junto a saltos de linea y enseñandolo al final del todo una sola vez en la consola.
+
+        Forma 1(): Esta forma cada vez que acaba una linea la proyecta en la consola y reinicia la variable para el próximo ciclo. 
+
+        Forma 2():Esta forma acumula en una variable todo el texto incluido los saltos de linea para luego enseñarlo una sola vez al final del todo.
+
+        Para ver cada una de las formas hay que descomentar las lineas bajo el comentario de la forma que quieras y comentar las que están bajo las que no quieres
+        Igual el comentario es un poco engorroso espero que se entienda
+        */
+        let fila;
+        let columna;
+        let simbolo;
+        let contenidoLinea = "";
+
+        fila = parseInt(prompt("Cuantas filas quieres que tenga tu tablero"));
+        while(isNaN(fila)){
+            fila = parseInt(prompt("Error: Necesito que me introduzcas un valor numerico para las filas del tablero por favor"));
+        }
+
+        //console.log(fila);
+
+        columna = parseInt(prompt("Que columnas quieres que tenga tu tablero"));
+        while(isNaN(columna)){
+            columna = parseInt(prompt("Error: Necesito que me introduzcas un valor numerico para las columnas del tablero por favor"));
+        }
+
+        //console.log(columna);
+
+        //El for exterior va avanzando las filas una a una
+        for(let contadorFilas = 1; contadorFilas <= fila; contadorFilas++){
+            // Forma 1 
+            //contenidoLinea = "";
+            //El siguiente if decide con que letra empieza la fila, las impares empiezan con X mientras que las pares con O
+            if(contadorFilas%2 == 0)
+                simbolo = "O";
+            else
+                simbolo = "X";
+            //El siguiente for se encarga de poner en cada linea su cantidad de letras correspondientes
+            for(let contadorColumnas = 1; contadorColumnas <= columna; contadorColumnas++){
+                contenidoLinea += simbolo;
+                //el if cambia entre X y O dependiendo de del último valor añadido a serie de letras de la fila
+                if(simbolo == "X")
+                    simbolo = "O";
+                else
+                    simbolo = "X";
+            }
+            //Forma 2
+            contenidoLinea += "\n";
+            //Forma 1
+            //console.log(contenidoLinea);
+        }
+
+        //Forma 2
+        console.log(contenidoLinea);
+
+    </script>
+
+
+</body>
+</html>

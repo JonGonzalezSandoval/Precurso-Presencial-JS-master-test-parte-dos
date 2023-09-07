@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let anchura;
+        let altura;
+
+        anchura = parseInt(prompt("¿Anchura del rectangulo?"));
+
+        while(isNaN(anchura)){
+            anchura = parseInt(prompt("¿Vuelve a introducir la anchura del rectangulo? \n(Tiene que ser un valor numérico)"));
+        }
+
+        altura = parseInt(prompt("Altura del rectangulo?"));
+
+        while(isNaN(altura)){
+            altura = parseInt(prompt("Vuelve a introducir la altura del rectangulo? \n(Tiene que ser un valor numérico)"));
+        }
+
+        console.log("El area del rectangulo es " + anchura * altura);
+    </script>
+
+</body>
+</html>
