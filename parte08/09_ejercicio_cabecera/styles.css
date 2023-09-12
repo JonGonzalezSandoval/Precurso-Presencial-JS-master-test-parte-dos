@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+#cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vh 10vh 4vh 10vh;
+    background-color: rgb(78, 161, 216);
+}
+
+
+#titulos > h2{
+    float: right;
+}
+
+
+#lista {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    margin: 0 1vh 0 1vh;
+    padding: 0 2vh 0 2vh;
+ }
+
+
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+
+

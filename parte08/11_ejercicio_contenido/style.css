@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#intros{
+    background-color: rgb(218, 69, 81);
+    padding: 2%;
+}
+#noticias{
+    background-color: rgb(5, 110, 61);
+    padding: 2%;
+}
+
+#tituloIntros{
+    text-align: center;
+    background-color: azure;
+    color: rgb(218, 69, 81);
+    width: 15%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+#tituloNoticias{
+    text-align: center;
+    background-color: azure;
+    color: rgb(5, 110, 61);
+    width: 15%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.contenido{
+    display: flex;
+    justify-content: space-around;
+}
+
+.column{
+
+    padding: 4vh;
+}
+
+.title{
+    text-align: center;
+}
+
+.paragraph {
+    text-align: center;
+}
