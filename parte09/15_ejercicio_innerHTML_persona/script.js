@@ -158,7 +158,8 @@ let personas = {
 //Queda pendiente alinear verticalmente el div, tengo que preguntar si podemos usar posición absolute para ello y seguir lo visto en internet ya que con flex no lo consigo aun siguiendo lo mismo que tengo puesto donde las ranas
 
 
-let busqueda = prompt("introduce el nombre de quien buscas");
+// let busqueda = prompt("introduce el nombre de quien buscas");
+let busqueda = "Tessa Sellers";
 
 //Esta función me permite comprobar si existe una propiedad 
 console.log(personas.hasOwnProperty(busqueda));
@@ -169,12 +170,11 @@ if (personas.hasOwnProperty(busqueda)) {
     let cuerpo = document.querySelector("body");
 
     let contenidoDiv = document.querySelector("#bloque");
+
     contenidoDiv.style.backgroundColor = persona.eyeColor;
-    contenidoDiv.style.display = "flex";
-    contenidoDiv.style.justifyContent = "center";
-    contenidoDiv.style.alignItems = "center";
-    contenidoDiv.style.padding = "1%";
-    contenidoDiv.style.flexDirection = "column";
+    contenidoDiv.style.boxShadow = "0 0 1rem " + persona.eyeColor;
+    //contenidoDiv.style.boxShadow = `0 0 1rem ${persona.eyeColor}`;
+
 
     document.querySelector("img").src = persona.picture;
     document.querySelector("h1").innerHTML = persona.name;
