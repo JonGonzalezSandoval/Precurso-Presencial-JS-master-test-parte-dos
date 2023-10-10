@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style the select element with border-radius */
+        select, button{
+            padding: 5px;
+            font-size: 32px;
+            border: 1px solid #ccc;
+            background-color: #f2f2f2;
+            color: #333;
+            border-radius: 10px; /* Add border radius for curved corners */
+            min-width: 40%;
+        }
+        button{
+            margin-left: 15px;
+            min-width: 20%;
+        }
+
+        /* Define the default styles for the button */
+        .highlight-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+
+            /* Apply a transition for the background color and box shadow with a 0.3s duration */
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Define the styles for the button when hovered */
+        .highlight-button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-select">
+        <h1>Select your destination</h1>
+        <select>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <button class="highlight-button">Search</button>
+    </div>
+</body>
+</html>
